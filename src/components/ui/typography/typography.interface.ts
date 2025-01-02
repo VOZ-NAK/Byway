@@ -2,11 +2,11 @@ import { ComponentProps } from 'react'
 
 type TVariant =
 	| 'title-small'
-	| 'title-medium '
+	| 'title-medium'
 	| 'title-large'
-	| 'text-small '
+	| 'text-small'
 	| 'text-medium'
-	| 'text-large '
+	| 'text-large'
 
 export interface ITypography extends ComponentProps<'p'> {
 	variant: TVariant
