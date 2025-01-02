@@ -1,11 +1,5 @@
-import Course from './components/shared/course/Course'
-
 function App() {
-	return (
-		<>
-			<Course />
-		</>
-	)
+	return <></>
 }
 
 export default App
