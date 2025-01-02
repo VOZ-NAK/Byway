@@ -11,7 +11,7 @@ const Typography: FC<PropsWithChildren<ITypography>> = ({
 }) => {
 	const classes = cn(variant, '')
 	return (
-		<p {...props} className={classes} style={{ color: color }}>
+		<p {...props} className={classes} style={{ color: `var(${color})` }}>
 			{children}
 		</p>
 	)
