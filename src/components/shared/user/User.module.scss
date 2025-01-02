@@ -1,0 +1,23 @@
+.user {
+	max-width: 290px;
+	background-color: var(--light-background);
+	border-radius: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	padding: 24px;
+	align-items: center;
+
+	&__avatar {
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		align-items: center;
+	}
+}
