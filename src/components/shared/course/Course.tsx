@@ -16,9 +16,13 @@ const Course: FC<ICourse> = ({ courseName, author, cover, price }) => {
 		<div className={styles.course}>
 			<img src='cover.svg' alt='cover' className={styles.course__cover} />
 			<div className={styles.course__info}>
-				<Typography variant='text-large'>Beginner’s Guide to Design</Typography>
+				<Typography variant='text-large' color='var(--light-blue)'>
+					Beginner’s Guide to Design
+				</Typography>
 				<Typography variant='text-medium'>By Ronald Richards</Typography>
-				<Typography variant='text-medium'>$149.9</Typography>
+				<Typography variant='text-medium' color='var(--light-blue)'>
+					$149.9
+				</Typography>
 			</div>
 		</div>
 	)
