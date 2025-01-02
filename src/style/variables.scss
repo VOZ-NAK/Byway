@@ -1,0 +1,46 @@
+:root {
+	/* Container styles */
+	[class*='__container'] {
+		max-width: var(--maxWidthContainer);
+		box-sizing: content-box;
+		padding: 0 15px;
+		margin: 0 auto;
+	}
+
+	/* Font families */
+	--fontFiraSansCondensed: 'Fira Sans Condensed', serif;
+	--fontFiraSans: 'Fira Sans', serif;
+	--fontInter: 'Inter', serif;
+	--fontPoppins: 'Poppins', serif;
+
+	/* Width settings */
+	--minWidth: 320px;
+	--maxWidth: 1440px;
+	--maxWidthContainer: 1288px;
+
+	/* Light shades */
+	--light-gray: rgba(237, 238, 240, 0.82);
+	--light-background: rgba(249, 249, 251, 1);
+	--semi-transparent-light-gray: rgba(237, 238, 240, 0.68);
+	--semi-transparent-light-gray-2: rgba(237, 238, 240, 0.96);
+	--semi-transparent-blue: rgba(158, 177, 255, 0.96);
+
+	/* Dark shades */
+	--dark-gray: rgba(17, 17, 19, 1);
+	--dark-background: rgba(28, 32, 36, 0.92);
+	--darker-background: rgba(24, 25, 27, 1);
+	--semi-transparent-dark-gray: rgba(28, 32, 36, 0.74);
+	--semi-transparent-darker-gray: rgba(28, 32, 36, 0.72);
+	--dark-navy: rgba(29, 41, 57, 1);
+
+	/* Blue and green shades */
+	--light-blue: rgba(73, 88, 198, 0.96);
+	--teal: rgba(0, 124, 101, 0.98);
+	--bright-blue: rgba(96, 165, 250, 1);
+	--light-teal: rgba(11, 216, 182, 0.98);
+
+	/* Red and yellow shades */
+	--light-red: rgba(248, 113, 113, 1);
+	--yellow: rgba(250, 204, 21, 1);
+	--gray-blue: rgba(203, 213, 225, 1);
+}
