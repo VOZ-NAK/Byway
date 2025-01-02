@@ -10,4 +10,5 @@ type TVariant =
 
 export interface ITypography extends ComponentProps<'p'> {
 	variant: TVariant
+	color?: string
 }
