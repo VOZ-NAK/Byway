@@ -1,0 +1,20 @@
+.head {
+	display: flex;
+	justify-content: space-between;
+	gap: 15px;
+	align-items: center;
+	flex-wrap: wrap;
+
+	& > :first-child {
+		@media (max-width: 450px) {
+			font-size: 28px;
+		}
+	}
+
+	button {
+		@media (max-width: 450px) {
+			font-size: 14px;
+			padding: 12px;
+		}
+	}
+}
