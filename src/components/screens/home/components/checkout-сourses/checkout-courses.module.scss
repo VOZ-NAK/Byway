@@ -1,0 +1,54 @@
+.checkoutCourses {
+	padding: 20px 0 40px 0;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		gap: 40px;
+	}
+
+	&__image {
+		flex: 1 1 50%;
+		height: 400px;
+		background: url('checkoutCourses.svg') no-repeat;
+
+		@media (max-width: 1040px) {
+			display: none;
+		}
+	}
+
+	&__left {
+		flex: 1 1 50%;
+	}
+
+	&__info {
+		& > :first-child {
+			margin-bottom: 16px;
+			white-space: wrap;
+
+			@media (max-width: 700px) {
+				text-align: center;
+			}
+		}
+
+		& > :nth-child(2) {
+			margin-bottom: 32px;
+
+			@media (max-width: 700px) {
+				text-align: center;
+			}
+		}
+
+		button {
+			@media (max-width: 700px) {
+				margin: 0 auto;
+			}
+
+			@media (max-width: 470px) {
+				width: 100%;
+				font-size: 16px;
+				justify-content: center;
+			}
+		}
+	}
+}

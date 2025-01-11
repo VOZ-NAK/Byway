@@ -1,0 +1,17 @@
+.button {
+	display: flex;
+	padding: 12px 24px;
+	background-color: var(--dark-gray);
+	border-radius: 24px;
+	align-items: center;
+	text-align: center;
+	flex-direction: row-reverse;
+	gap: 8px;
+	white-space: nowrap;
+	font-size: 20px;
+	font-weight: 400;
+	color: var(--semi-transparent-light-gray-2);
+	&::before {
+		font-size: 12px;
+	}
+}
