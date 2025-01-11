@@ -1,0 +1,5 @@
+export { default as Category } from './category/Category'
+export { default as Insights } from './insights/Insights'
+export { default as Preview } from './preview/Preview'
+export { default as InstructorJourney } from './instructor-journey/InstructorJourney'
+export { default as CheckoutCourses } from './checkout-сourses/CheckoutCourses'

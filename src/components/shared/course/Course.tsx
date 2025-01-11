@@ -2,26 +2,24 @@ import { FC } from 'react'
 
 import { Typography } from '@/components/ui'
 
-import styles from './Course.module.scss'
-
-interface ICourse {
-	courseName: string
-	author: string
-	cover: string
-	price: number
-}
+import { ICourse } from './course.interface'
+import styles from './course.module.scss'
 
 const Course: FC<ICourse> = ({ courseName, author, cover, price }) => {
 	return (
 		<div className={styles.course}>
-			<img src='cover.svg' alt='cover' className={styles.course__cover} />
+			<img
+				src={cover}
+				alt={`${courseName} icon`}
+				className={styles.course__cover}
+			/>
 			<div className={styles.course__info}>
-				<Typography variant='text-large' color='--light-blue'>
-					Beginner’s Guide to Design
+				<Typography variant='text-large' color='--dark-blue'>
+					{courseName}
 				</Typography>
-				<Typography variant='text-medium'>By Ronald Richards</Typography>
-				<Typography variant='text-medium' color='--light-blue'>
-					$149.9
+				<Typography variant='text-medium'>{author}</Typography>
+				<Typography variant='text-medium' color='--dark-blue'>
+					{`$${price}`}
 				</Typography>
 			</div>
 		</div>
@@ -29,3 +27,19 @@ const Course: FC<ICourse> = ({ courseName, author, cover, price }) => {
 }
 
 export default Course
+
+// Course component for displaying course information
+//
+// Props:
+// - courseName: the name of the course
+// - author: the name of the course author
+// - cover: URL or path to the course cover image
+// - price: the price of the course
+//
+// Example usage:
+// <Course
+//   courseName="Beginner’s Guide to Design"
+//   author="Ronald Richards"
+//   cover="path/to/cover.svg"
+//   price={149.9}
+// />

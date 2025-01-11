@@ -2,13 +2,8 @@ import { FC } from 'react'
 
 import { Typography } from '@/components/ui'
 
-import styles from './User.module.scss'
-
-interface IUser {
-	avatar: string
-	name: string
-	title: string
-}
+import { IUser } from './user.interface'
+import styles from './user.module.scss'
 
 const User: FC<IUser> = ({ avatar, name, title }) => {
 	return (
@@ -25,3 +20,13 @@ const User: FC<IUser> = ({ avatar, name, title }) => {
 }
 
 export default User
+
+// User component for displaying user information
+//
+// Props:
+// - avatar: URL or path to the user's avatar image
+// - name: the name of the user
+// - title: the user's job title
+//
+// Example usage:
+// <User avatar="path/to/avatar.png" name="Ronald Richards" title="UI/UX Designer" />

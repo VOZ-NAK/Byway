@@ -1,5 +1,5 @@
 .user {
-	max-width: 290px;
+	width: 290px;
 	background-color: var(--light-background);
 	border-radius: 24px;
 	display: flex;
@@ -7,6 +7,11 @@
 	gap: 24px;
 	padding: 24px;
 	align-items: center;
+
+	@media (max-width: 1240px) {
+		justify-content: center;
+		width: 100%;
+	}
 
 	&__avatar {
 		width: 200px;

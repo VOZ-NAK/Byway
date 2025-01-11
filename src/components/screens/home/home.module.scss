@@ -1,0 +1,29 @@
+.categories {
+	padding: 20px 0;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+	}
+}
+
+.courses {
+	padding: 20px 0;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+	}
+}
+
+.instructors {
+	padding: 20px 0;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+	}
+}
