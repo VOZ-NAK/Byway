@@ -1,5 +1,6 @@
 @use './null' as *;
 @use './variables' as *;
+@use './fonts' as *;
 
 @import url('https://fonts.googleapis.com/css?family=Inter:400,500,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,500&display=swap');
@@ -26,6 +27,13 @@
 	font-size: 40px;
 	font-weight: 500;
 	white-space: nowrap;
+}
+
+.text {
+	font-family: var(--fontFiraSans);
+	font-size: 20px;
+	font-weight: 400;
+	color: var(--semi-transparent-dark-gray);
 }
 
 .text-small {
