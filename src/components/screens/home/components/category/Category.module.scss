@@ -2,11 +2,19 @@
 	display: flex;
 	gap: 24px;
 	padding: 24px;
-	max-width: 290px;
+	width: 290px;
 	align-items: center;
 	border-radius: 24px;
 	background-color: var(--light-background);
-	overflow: hidden;
+
+	@media (max-width: 1240px) {
+		justify-content: center;
+		width: 100%;
+	}
+
+	@media (max-width: 630px) {
+		justify-content: start;
+	}
 
 	&__info {
 		display: flex;
@@ -17,11 +25,5 @@
 	&__icon {
 		width: 72px;
 		height: 72px;
-	}
-
-	&__count {
-		font-size: 20px;
-		font-weight: 400;
-		color: var(--semi-transparent-dark-gray);
 	}
 }
