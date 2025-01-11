@@ -1,0 +1,10 @@
+.swiper {
+	width: 100%;
+}
+
+.swiperSlide {
+	@media (max-width: 1288px) {
+		display: flex;
+		justify-content: center;
+	}
+}
