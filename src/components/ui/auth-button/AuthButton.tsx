@@ -1,11 +1,14 @@
-import { ComponentProps, FC, PropsWithChildren, useState } from 'react'
+import { FC, PropsWithChildren, useState } from 'react'
 
 import { IAuthButton } from './auth-button.interface'
 import styles from './auth-button.module.scss'
 
-const AuthButton: FC<
-	PropsWithChildren<IAuthButton & ComponentProps<'button'>>
-> = ({ children, bgColor, onClick, ...props }) => {
+const AuthButton: FC<PropsWithChildren<IAuthButton>> = ({
+	children,
+	bgColor,
+	onClick,
+	...props
+}) => {
 	const [isHovered, setIsHovered] = useState(false)
 
 	const buttonStyle = {
