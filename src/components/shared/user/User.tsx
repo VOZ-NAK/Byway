@@ -8,12 +8,16 @@ import styles from './user.module.scss'
 const User: FC<IUser> = ({ avatar, name, title }) => {
 	return (
 		<div className={styles.user}>
-			<img src='avatar.png' alt='avatar' className={styles.user__avatar} />
+			<img
+				src={avatar}
+				alt={`${avatar} icon`}
+				className={styles.user__avatar}
+			/>
 			<div className={styles.user__info}>
 				<Typography variant='text-medium' color='--teal'>
-					Ronald Richards
+					{name}
 				</Typography>
-				<Typography variant='text-small'>UI/UX Designer</Typography>
+				<Typography variant='text-small'>{title}</Typography>
 			</div>
 		</div>
 	)

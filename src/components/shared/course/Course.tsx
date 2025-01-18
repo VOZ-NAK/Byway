@@ -8,11 +8,9 @@ import styles from './course.module.scss'
 const Course: FC<ICourse> = ({ courseName, author, cover, price }) => {
 	return (
 		<div className={styles.course}>
-			<img
-				src={cover}
-				alt={`${courseName} icon`}
-				className={styles.course__cover}
-			/>
+			<div className={styles.course__cover}>
+				<img src={cover} alt={`${courseName} icon`} />
+			</div>
 			<div className={styles.course__info}>
 				<Typography variant='text-large' color='--dark-blue'>
 					{courseName}
