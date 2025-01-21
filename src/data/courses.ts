@@ -1,11 +1,6 @@
-interface ICourses {
-	cover: string
-	courseName: string
-	author: string
-	price: number
-}
+import { ICourse } from '@/types'
 
-const courses: ICourses[] = [
+const courses: ICourse[] = [
 	{
 		cover: 'cover.svg',
 		courseName: 'Beginner’s Guide to Design',

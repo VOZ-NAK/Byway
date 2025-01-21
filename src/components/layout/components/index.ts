@@ -1,2 +1,2 @@
-export { default as Footer } from '../components/footer/Footer'
-export { default as Header } from '../components/header/Header'
+export { default as Footer } from './footer/Footer'
+export { default as Header } from './header/Header'

@@ -2,8 +2,8 @@ import { FC } from 'react'
 
 import { Typography } from '@/components/ui'
 
-import { IUser } from './user.interface'
 import styles from './user.module.scss'
+import { IUser } from '@/types'
 
 const User: FC<IUser> = ({ avatar, name, title }) => {
 	return (

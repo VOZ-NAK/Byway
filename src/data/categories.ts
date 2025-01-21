@@ -1,8 +1,4 @@
-interface ICategory {
-	categoryName: string
-	icon: string
-	courseCount: number
-}
+import { ICategory } from '@/types'
 
 const categories: ICategory[] = [
 	{

@@ -1,4 +1,4 @@
-export type TColor =
+type TColor =
 	| '--light-gray'
 	| '--light-background'
 	| '--semi-transparent-light-gray'
@@ -19,3 +19,5 @@ export type TColor =
 	| '--light-red'
 	| '--yellow'
 	| '--gray-blue'
+
+export type { TColor }

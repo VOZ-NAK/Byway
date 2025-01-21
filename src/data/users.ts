@@ -1,4 +1,4 @@
-import { IUser } from '@/components/shared/user/user.interface'
+import { IUser } from '@/types'
 
 const users: IUser[] = [
 	{

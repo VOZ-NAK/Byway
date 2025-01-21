@@ -17,7 +17,7 @@ const Course: FC<ICourse> = ({ courseName, author, cover, price }) => {
 				</Typography>
 				<Typography variant='text-medium'>{author}</Typography>
 				<Typography variant='text-medium' color='--dark-blue'>
-					{`$${price}`}
+					${price}
 				</Typography>
 			</div>
 		</div>

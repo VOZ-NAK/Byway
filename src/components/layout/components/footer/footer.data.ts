@@ -3,12 +3,12 @@ interface ILink {
 	href: string
 }
 
-interface IFooterSection {
+interface IMenu {
 	title: string
 	links: ILink[]
 }
 
-const footerLinks: IFooterSection[] = [
+export const menu: IMenu[] = [
 	{
 		title: 'Get Help',
 		links: [
@@ -39,4 +39,3 @@ const footerLinks: IFooterSection[] = [
 		]
 	}
 ]
-export default footerLinks

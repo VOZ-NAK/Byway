@@ -1,27 +1,30 @@
+import cn from 'clsx'
 import { FC } from 'react'
 
 import { Typography } from '@/components/ui'
 
+import { menu } from './footer.data'
 import styles from './footer.module.scss'
-import { footerLinks } from '@/data'
 
 const Footer: FC = () => {
 	return (
 		<footer className={styles.footer}>
 			<div className={styles.footer__container}>
 				<div className={styles.footer__description}>
-					<div className={styles.footer__description_logo}>
-						<a
-							href='#'
-							className={`${styles.footer__description_logo_image} _icon-byway`}
-						></a>
+					<a href='/' className={styles.footer__description_logo}>
+						<span
+							className={cn(
+								styles.footer__description_logo_image,
+								'_icon-byway'
+							)}
+						/>
 						<Typography
 							variant='title-large'
 							color='--semi-transparent-light-gray-2'
 						>
 							Byway
 						</Typography>
-					</div>
+					</a>
 					<Typography
 						variant='text-small'
 						color='--semi-transparent-light-gray-2'
@@ -32,11 +35,11 @@ const Footer: FC = () => {
 						experiences.
 					</Typography>
 				</div>
-				{footerLinks.map((section, index: number) => (
+				{menu.map((section, index) => (
 					<div className={styles.footer__infoColumn} key={index}>
 						<Typography variant='title-small'>{section.title}</Typography>
 						<ul>
-							{section.links.map((link, linkIndex: number) => (
+							{section.links.map((link, linkIndex) => (
 								<li key={linkIndex}>
 									<Typography
 										variant='text-small'

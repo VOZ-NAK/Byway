@@ -6,7 +6,6 @@ import styles from './auth-button.module.scss'
 const AuthButton: FC<PropsWithChildren<IAuthButton>> = ({
 	children,
 	bgColor,
-	onClick,
 	...props
 }) => {
 	const [isHovered, setIsHovered] = useState(false)
@@ -21,7 +20,6 @@ const AuthButton: FC<PropsWithChildren<IAuthButton>> = ({
 			style={buttonStyle}
 			onMouseEnter={() => setIsHovered(true)}
 			onMouseLeave={() => setIsHovered(false)}
-			onClick={onClick}
 			{...props}
 		>
 			{children}
