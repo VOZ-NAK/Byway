@@ -4,8 +4,8 @@ import { DataProvider } from './providers'
 import { decrement, increment } from './store/reducers/counterSlice'
 
 function App() {
-	const count = useAppSelector(state => state.counterReducer.value)
-	const dispatch = useAppDispatch()
+	// const count = useAppSelector(state => state.counterReducer.value)
+	// const dispatch = useAppDispatch()
 
 	return (
 		<DataProvider>

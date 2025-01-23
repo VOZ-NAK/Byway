@@ -1,9 +1,17 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 
-import counterReducer from './reducers/counterSlice'
+import {
+	categoriesReducer,
+	counterReducer,
+	coursesReducer,
+	usersReducer
+} from './reducers'
 
 const rootReducer = combineReducers({
-	counterReducer
+	counter: counterReducer,
+	categories: categoriesReducer,
+	courses: coursesReducer,
+	users: usersReducer
 })
 
 export const store = configureStore({

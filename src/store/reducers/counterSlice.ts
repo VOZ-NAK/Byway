@@ -1,8 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-import { ICounter } from '@/types'
+interface ICounterState {
+	value: number
+}
 
-const initialState: ICounter = {
+const initialState: ICounterState = {
 	value: 0
 }
 

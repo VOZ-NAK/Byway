@@ -3,6 +3,8 @@ import { FC } from 'react'
 import Layout from '@/components/layout/Layout'
 import { Course, Head, Swiper, User } from '@/components/shared'
 
+import { useAppSelector } from '@/hooks/redux'
+
 import {
 	Category,
 	CheckoutCourses,
@@ -11,10 +13,11 @@ import {
 	Preview
 } from './components'
 import styles from './home.module.scss'
-import { useData } from '@/providers'
 
 const Home: FC = () => {
-	const { categories, courses, users } = useData()
+	const categories = useAppSelector(state => state.categories)
+	const courses = useAppSelector(state => state.courses)
+	const users = useAppSelector(state => state.users)
 
 	return (
 		<Layout>
@@ -28,7 +31,7 @@ const Home: FC = () => {
 						onClick={() => {}}
 					/>
 					<Swiper
-						items={categories}
+						items={categories.categories}
 						renderItem={category => (
 							<Category key={category.categoryName} {...category} />
 						)}
@@ -43,7 +46,7 @@ const Home: FC = () => {
 						onClick={() => {}}
 					></Head>
 					<Swiper
-						items={courses}
+						items={courses.courses}
 						renderItem={course => <Course key={course.price} {...course} />}
 					/>
 				</div>
@@ -56,7 +59,7 @@ const Home: FC = () => {
 						onClick={() => {}}
 					></Head>
 					<Swiper
-						items={users}
+						items={users.users}
 						renderItem={user => <User key={user.name} {...user} />}
 					/>
 				</div>
