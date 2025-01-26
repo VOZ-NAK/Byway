@@ -1,5 +1,6 @@
 import cn from 'clsx'
 import { FC } from 'react'
+import { Link } from 'react-router-dom'
 
 import { Typography } from '@/components/ui'
 
@@ -11,7 +12,7 @@ const Footer: FC = () => {
 		<footer className={styles.footer}>
 			<div className={styles.footer__container}>
 				<div className={styles.footer__description}>
-					<a href='/' className={styles.footer__description_logo}>
+					<Link to='/' className={styles.footer__description_logo}>
 						<span
 							className={cn(
 								styles.footer__description_logo_image,
@@ -24,7 +25,7 @@ const Footer: FC = () => {
 						>
 							Byway
 						</Typography>
-					</a>
+					</Link>
 					<Typography
 						variant='text-small'
 						color='--semi-transparent-light-gray-2'

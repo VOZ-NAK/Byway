@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import Layout from '@/components/layout/Layout'
 import { Course, Head, Swiper, User } from '@/components/shared'
@@ -15,6 +16,7 @@ import {
 import styles from './home.module.scss'
 
 const Home: FC = () => {
+	const navigate = useNavigate()
 	const categories = useAppSelector(state => state.categories)
 	const courses = useAppSelector(state => state.courses)
 	const users = useAppSelector(state => state.users)
@@ -43,7 +45,7 @@ const Home: FC = () => {
 					<Head
 						title='Top Courses'
 						buttonText='See all'
-						onClick={() => {}}
+						onClick={() => navigate('/courses')}
 					></Head>
 					<Swiper
 						items={courses.courses}

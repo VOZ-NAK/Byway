@@ -1,5 +1,6 @@
 import cn from 'clsx'
 import { ChangeEvent, FC, useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 import { AuthButton, Input } from '@/components/ui'
 
@@ -29,7 +30,11 @@ const Header: FC = () => {
 	return (
 		<header className={styles.header}>
 			<div className={styles.header__container}>
-				<a href='#' className={cn(styles.header__logo, '_icon-byway')}></a>
+				<Link
+					to='/'
+					className={cn(styles.header__logo, '_icon-byway')}
+					aria-label='Logo'
+				></Link>
 				<Input
 					placeholder='Search...'
 					onChange={handleChange}

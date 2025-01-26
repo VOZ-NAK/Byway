@@ -2,8 +2,8 @@ import { FC } from 'react'
 
 import { Typography } from '@/components/ui'
 
-import { ICategory } from './category.interface'
 import styles from './category.module.scss'
+import { ICategory } from '@/types'
 
 const Category: FC<ICategory> = ({ icon, categoryName, courseCount }) => {
 	return (
