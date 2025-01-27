@@ -1,3 +1,5 @@
+import { MemoryRouter } from 'react-router-dom'
+
 import Footer from './Footer'
 import '@/style/index.scss'
 
@@ -6,12 +8,10 @@ export default {
 	component: Footer
 }
 
-const Template = args => <Footer {...args} />
+const Template = args => (
+	<MemoryRouter initialEntries={['/']}>
+		<Footer {...args} />
+	</MemoryRouter>
+)
 
 export const Default = Template.bind({})
-
-// Default.args = {
-// 	icon: 'circle.svg',
-// 	categoryName: 'Astrology',
-// 	courseCount: 11
-// }

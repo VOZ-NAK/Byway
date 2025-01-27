@@ -1,5 +1,6 @@
 export { default as Typography } from './typography/Typography'
 export { default as Button } from './button/Button'
 export { default as AuthButton } from './auth-button/AuthButton'
-export { default as Input } from './input/Input'
+export { default as SearchInput } from './search-input/search-input'
 export { default as Spoiler } from './spoiler/Spoiler'
+export { default as Input } from './input/Input'

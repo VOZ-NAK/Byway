@@ -1,14 +1,15 @@
 import cn from 'clsx'
 import { ChangeEvent, FC, useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
-import { AuthButton, Input } from '@/components/ui'
+import { AuthButton, SearchInput } from '@/components/ui'
 
 import styles from './header.module.scss'
 
 const Header: FC = () => {
 	const [inputValue, setInputValue] = useState<string>('')
 	const [isMobile, setIsMobile] = useState<boolean>(false)
+	const navigate = useNavigate()
 
 	const handleResize = () => {
 		setIsMobile(window.innerWidth < 768)
@@ -35,7 +36,7 @@ const Header: FC = () => {
 					className={cn(styles.header__logo, '_icon-byway')}
 					aria-label='Logo'
 				></Link>
-				<Input
+				<SearchInput
 					placeholder='Search...'
 					onChange={handleChange}
 					value={inputValue}
@@ -49,10 +50,20 @@ const Header: FC = () => {
 							></button>
 						) : (
 							<>
-								<AuthButton onClick={() => {}} bgColor='--light-teal'>
+								<AuthButton
+									onClick={() => {
+										navigate('/auth/login')
+									}}
+									bgColor='--light-teal'
+								>
 									Log in
 								</AuthButton>
-								<AuthButton onClick={() => {}} bgColor='--light-blue'>
+								<AuthButton
+									onClick={() => {
+										navigate('/auth/register')
+									}}
+									bgColor='--light-blue'
+								>
 									Sign up
 								</AuthButton>
 							</>

@@ -1,3 +1,5 @@
 export { default as Home } from './home/Home'
 export { default as ErrorPage } from './error-page/ErrorPage'
 export { default as CoursesList } from './courses-list/CoursesList'
+export { default as Register } from './register/Register'
+export { default as Login } from './login/Login'

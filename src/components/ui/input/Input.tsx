@@ -1,16 +1,20 @@
 import cn from 'clsx'
-import { ComponentProps, FC } from 'react'
+import { FC } from 'react'
+
+import Typography from '../typography/Typography'
 
 import styles from './input.module.scss'
+import { IInput } from '@/types'
 
-const Input: FC<ComponentProps<'input'>> = ({ ...props }) => {
+const Input: FC<IInput> = ({ label, type, ...props }) => {
 	return (
 		<div className={styles.inputContainer}>
-			<input className={styles.input} type='text' {...props} />
-			<button
-				type='submit'
-				className={cn(styles.input__button, '_icon-search')}
-			></button>
+			<label className={styles.label} htmlFor={label}>
+				<Typography variant='text-medium' color='--dark-gray'>
+					{label}
+				</Typography>
+			</label>
+			<input className={styles.input} type={type} {...props} />
 		</div>
 	)
 }
