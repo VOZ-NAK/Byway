@@ -12,7 +12,7 @@ export const Default = Template.bind({})
 
 Default.args = {
 	cover: 'cover.svg',
-	courseName: 'Beginner’s Guide to Design',
+	title: 'Beginner’s Guide to Design',
 	author: 'By Ronald Richards',
 	price: 149.9
 }

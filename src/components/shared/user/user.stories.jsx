@@ -11,7 +11,7 @@ const Template = args => <User {...args} />
 export const Default = Template.bind({})
 
 Default.args = {
-	avatar: 'avatar.png',
+	cover: 'avatar.png',
 	name: 'Alice Johnson',
-	title: 'Graphic Designer'
+	headline: 'Graphic Designer'
 }
