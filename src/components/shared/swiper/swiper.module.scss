@@ -3,6 +3,12 @@
 }
 
 .swiperSlide {
+	height: initial;
+
+	& > :first-child {
+		height: 100%;
+	}
+
 	@media (max-width: 1288px) {
 		display: flex;
 		justify-content: center;

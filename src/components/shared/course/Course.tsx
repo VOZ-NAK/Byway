@@ -2,18 +2,18 @@ import { FC } from 'react'
 
 import { Typography } from '@/components/ui'
 
-import { ICourse } from './course.interface'
 import styles from './course.module.scss'
+import { ICourse } from '@/types/courseTypes'
 
-const Course: FC<ICourse> = ({ courseName, author, cover, price }) => {
+const Course: FC<ICourse> = ({ title, author, cover, price }) => {
 	return (
 		<div className={styles.course}>
 			<div className={styles.course__cover}>
-				<img src={cover} alt={`${courseName} icon`} />
+				<img src={cover} alt={`${title} icon`} />
 			</div>
 			<div className={styles.course__info}>
 				<Typography variant='text-large' color='--dark-blue'>
-					{courseName}
+					{title}
 				</Typography>
 				<Typography variant='text-medium'>{author}</Typography>
 				<Typography variant='text-medium' color='--dark-blue'>

@@ -1,10 +1,12 @@
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+
+import { fetchCategories, fetchCourses, fetchUsers } from '@/store/api'
 
 import Layout from '@/components/layout/Layout'
 import { Course, Head, Swiper, User } from '@/components/shared'
 
-import { useAppSelector } from '@/hooks/redux'
+import { useAppDispatch, useAppSelector } from '@/hooks/redux'
 
 import {
 	Category,
@@ -17,9 +19,35 @@ import styles from './home.module.scss'
 
 const Home: FC = () => {
 	const navigate = useNavigate()
-	const categories = useAppSelector(state => state.categories)
-	const courses = useAppSelector(state => state.courses)
-	const users = useAppSelector(state => state.users)
+	const dispatch = useAppDispatch()
+
+	const {
+		categories,
+		isLoading: categoriesLoading,
+		error: categoriesError
+	} = useAppSelector(state => state.category)
+
+	const {
+		users,
+		isLoading: usersLoading,
+		error: usersError
+	} = useAppSelector(state => state.user)
+
+	const {
+		courses,
+		isLoading: coursesLoading,
+		error: coursesError
+	} = useAppSelector(state => state.course)
+
+	useEffect(() => {
+		dispatch(fetchUsers())
+		dispatch(fetchCourses())
+		dispatch(fetchCategories())
+	}, [dispatch])
+
+	if (usersError || coursesError) {
+		return <div>Ошибка: {usersError || coursesError}</div>
+	}
 
 	return (
 		<Layout>
@@ -33,9 +61,9 @@ const Home: FC = () => {
 						onClick={() => {}}
 					/>
 					<Swiper
-						items={categories.categories}
+						items={categories}
 						renderItem={category => (
-							<Category key={category.categoryName} {...category} />
+							<Category key={category.id} {...category} />
 						)}
 					/>
 				</div>
@@ -48,8 +76,8 @@ const Home: FC = () => {
 						onClick={() => navigate('/courses')}
 					></Head>
 					<Swiper
-						items={courses.courses}
-						renderItem={course => <Course key={course.price} {...course} />}
+						items={courses}
+						renderItem={course => <Course key={course.id} {...course} />}
 					/>
 				</div>
 			</section>
@@ -61,8 +89,8 @@ const Home: FC = () => {
 						onClick={() => {}}
 					></Head>
 					<Swiper
-						items={users.users}
-						renderItem={user => <User key={user.name} {...user} />}
+						items={users}
+						renderItem={user => <User key={user.id} {...user} />}
 					/>
 				</div>
 			</section>

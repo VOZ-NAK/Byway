@@ -1,10 +1,16 @@
 import cn from 'clsx'
 import { FC } from 'react'
+import { ComponentProps } from 'react'
 
 import Typography from '../typography/Typography'
 
 import styles from './input.module.scss'
-import { IInput } from '@/types'
+
+interface IInput extends ComponentProps<'input'> {
+	label: string
+	type: 'text' | 'email' | 'password'
+	placeholder: string
+}
 
 const Input: FC<IInput> = ({ label, type, ...props }) => {
 	return (

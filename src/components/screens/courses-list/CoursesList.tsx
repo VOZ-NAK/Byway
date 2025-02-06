@@ -1,17 +1,39 @@
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
+
+import { fetchCourses, fetchUsers } from '@/store/api'
 
 import Layout from '@/components/layout/Layout'
 import { Course, Head, Swiper, User } from '@/components/shared'
 import { Typography } from '@/components/ui'
 
-import { useAppSelector } from '@/hooks/redux'
+import { useAppDispatch, useAppSelector } from '@/hooks/redux'
 
 import { FilterSidebar } from './components'
 import styles from './courses-list.module.scss'
 
 const CoursesList: FC = () => {
-	const users = useAppSelector(state => state.users)
-	const courses = useAppSelector(state => state.courses)
+	const dispatch = useAppDispatch()
+
+	const {
+		users,
+		isLoading: usersLoading,
+		error: usersError
+	} = useAppSelector(state => state.user)
+
+	const {
+		courses,
+		isLoading: coursesLoading,
+		error: coursesError
+	} = useAppSelector(state => state.course)
+
+	useEffect(() => {
+		dispatch(fetchUsers())
+		dispatch(fetchCourses())
+	}, [dispatch])
+
+	if (usersError || coursesError) {
+		return <div>Ошибка: {usersError || coursesError}</div>
+	}
 
 	return (
 		<Layout>
@@ -24,8 +46,8 @@ const CoursesList: FC = () => {
 				<div className={styles.body__container}>
 					<FilterSidebar />
 					<div className={styles.coursesList}>
-						{courses.courses.map((course, index) => (
-							<Course key={index} {...course} />
+						{courses.map(course => (
+							<Course key={course.id} {...course} />
 						))}
 					</div>
 				</div>
@@ -38,8 +60,8 @@ const CoursesList: FC = () => {
 						onClick={() => {}}
 					></Head>
 					<Swiper
-						items={users.users}
-						renderItem={user => <User key={user.name} {...user} />}
+						items={users}
+						renderItem={user => <User key={user.id} {...user} />}
 					/>
 				</div>
 			</section>

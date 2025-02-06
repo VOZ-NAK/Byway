@@ -1,17 +1,17 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 
 import {
-	categoriesReducer,
+	categoryReducer,
 	counterReducer,
-	coursesReducer,
-	usersReducer
-} from './reducers'
+	courseReducer,
+	userReducer
+} from './slices'
 
 const rootReducer = combineReducers({
 	counter: counterReducer,
-	categories: categoriesReducer,
-	courses: coursesReducer,
-	users: usersReducer
+	category: categoryReducer,
+	course: courseReducer,
+	user: userReducer
 })
 
 export const store = configureStore({

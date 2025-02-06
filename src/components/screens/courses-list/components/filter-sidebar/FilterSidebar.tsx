@@ -8,32 +8,32 @@ const FilterSidebar: FC = () => {
 	return (
 		<aside className={styles.sidebarFilters}>
 			<Spoiler title='Sort by'>
-				<p>Cпойлер 1.</p>
-				<p>Cпойлер 1.</p>
-				<p>Cпойлер 1.</p>
-				<p>Cпойлер 1.</p>
-				<p>Cпойлер 1.</p>
+				<div className={styles.item}>Cпойлер 1.</div>
+				<div className={styles.item}>Cпойлер 1.</div>
+				<div className={styles.item}>Cпойлер 1.</div>
+				<div className={styles.item}>Cпойлер 1.</div>
+				<div className={styles.item}>Cпойлер 1.</div>
 			</Spoiler>
 			<Spoiler title='Rating'>
-				<p>Cпойлер 2.</p>
-				<p>Cпойлер 2.</p>
-				<p>Cпойлер 2.</p>
-				<p>Cпойлер 2.</p>
-				<p>Cпойлер 2.</p>
+				<div className={styles.item}>Cпойлер 2.</div>
+				<div className={styles.item}>Cпойлер 2.</div>
+				<div className={styles.item}>Cпойлер 2.</div>
+				<div className={styles.item}>Cпойлер 2.</div>
+				<div className={styles.item}>Cпойлер 2.</div>
 			</Spoiler>
 			<Spoiler title='Price'>
-				<p>Cпойлер 3.</p>
-				<p>Cпойлер 3.</p>
-				<p>Cпойлер 3.</p>
-				<p>Cпойлер 3.</p>
-				<p>Cпойлер 3.</p>
+				<div className={styles.item}>Cпойлер 3.</div>
+				<div className={styles.item}>Cпойлер 3.</div>
+				<div className={styles.item}>Cпойлер 3.</div>
+				<div className={styles.item}>Cпойлер 3.</div>
+				<div className={styles.item}>Cпойлер 3.</div>
 			</Spoiler>
 			<Spoiler title='Category'>
-				<p>Cпойлер 4.</p>
-				<p>Cпойлер 4.</p>
-				<p>Cпойлер 4.</p>
-				<p>Cпойлер 4.</p>
-				<p>Cпойлер 4.</p>
+				<div className={styles.item}>Cпойлер 4.</div>
+				<div className={styles.item}>Cпойлер 4.</div>
+				<div className={styles.item}>Cпойлер 4.</div>
+				<div className={styles.item}>Cпойлер 4.</div>
+				<div className={styles.item}>Cпойлер 4.</div>
 			</Spoiler>
 		</aside>
 	)

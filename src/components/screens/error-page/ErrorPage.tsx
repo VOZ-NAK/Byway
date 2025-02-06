@@ -2,7 +2,12 @@ import { FC } from 'react'
 import { useRouteError } from 'react-router-dom'
 
 import styles from './error-page.module.scss'
-import { IRouteError } from '@/types'
+
+interface IRouteError {
+	statusText?: string
+	message?: string
+}
+export type { IRouteError }
 
 const ErrorPage: FC = () => {
 	const error = useRouteError() as IRouteError | null

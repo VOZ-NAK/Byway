@@ -42,12 +42,11 @@
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
 	max-height: 0;
-	transition: all 0.5s ease 0s;
+	transition: max-height 0.5s linear 0s;
 }
 
 .body.active {
 	max-height: 500px;
-	padding-bottom: 20px;
+	transition: max-height 0.5s linear 0s;
 }
