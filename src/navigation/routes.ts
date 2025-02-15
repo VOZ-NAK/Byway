@@ -1,5 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
 
+import Profile from '@/components/screens/profile/UserProfile'
+
 import {
 	CoursesList,
 	ErrorPage,
@@ -8,27 +10,29 @@ import {
 	Register
 } from '../components/screens'
 
-const router = createBrowserRouter([
+export const routes = [
 	{
 		path: '/',
-		element: <Home />
+		element: Home
 	},
 	{
 		path: '/courses',
-		element: <CoursesList />
+		element: CoursesList
 	},
 	{
 		path: '/auth/register',
-		element: <Register />
+		element: Register
 	},
 	{
 		path: '/auth/login',
-		element: <Login />
+		element: Login
 	},
 	{
-		path: '*',
-		element: <ErrorPage />
+		path: '/profile',
+		element: Profile
+	},
+	{
+		path: '/not-found',
+		element: ErrorPage
 	}
-])
-
-export default router
+]

@@ -6,7 +6,7 @@ import {
 	deleteCategory,
 	fetchCategories,
 	updateCategory
-} from '../api/categoryActions'
+} from '../actions/categoryActions'
 
 // State interface
 interface ICategoryState {

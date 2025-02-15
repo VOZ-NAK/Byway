@@ -1,6 +1,7 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 
 import {
+	authReducer,
 	categoryReducer,
 	counterReducer,
 	courseReducer,
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
 	counter: counterReducer,
 	category: categoryReducer,
 	course: courseReducer,
+	auth: authReducer,
 	user: userReducer
 })
 

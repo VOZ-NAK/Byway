@@ -3,6 +3,8 @@
 	background-color: var(--light-background);
 	border-radius: 24px;
 	overflow: hidden;
+	display: flex;
+	flex-direction: column;
 
 	@media (max-width: 1240px) {
 		justify-content: center;
@@ -28,7 +30,8 @@
 		flex-direction: column;
 		gap: 8px;
 		padding: 24px;
-		height: calc(100% - 47.93%);
+		flex: 1 1 auto;
+
 		justify-content: flex-end;
 
 		& > :nth-child(1) {

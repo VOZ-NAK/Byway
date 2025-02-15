@@ -1,6 +1,6 @@
 import { FC, useEffect } from 'react'
 
-import { fetchCourses, fetchUsers } from '@/store/api'
+import { fetchCourses, fetchUsers } from '@/store/actions'
 
 import Layout from '@/components/layout/Layout'
 import { Course, Head, Swiper, User } from '@/components/shared'

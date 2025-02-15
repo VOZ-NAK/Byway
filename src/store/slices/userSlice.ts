@@ -1,24 +1,27 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 
-import { IUser } from '../../types'
 import {
 	createUser,
 	deleteUser,
 	fetchUsers,
+	setCurrentUser,
 	updateUser
-} from '../api/userActions'
+} from '@/store/actions/userActions'
 
-// State interface
+import { IUser } from '@/types'
+
 interface IUserState {
 	users: IUser[]
 	isLoading: boolean
 	error: string | null
+	currentUser: IUser | null
 }
 
 const initialState: IUserState = {
 	users: [],
 	isLoading: false,
-	error: null
+	error: null,
+	currentUser: null
 }
 
 const userSlice = createSlice({
@@ -27,7 +30,22 @@ const userSlice = createSlice({
 	reducers: {},
 	extraReducers: builder => {
 		builder
-			// Fetch users
+			.addCase(setCurrentUser.pending, state => {
+				state.isLoading = true
+			})
+			.addCase(
+				setCurrentUser.fulfilled,
+				(state, action: PayloadAction<IUser>) => {
+					state.isLoading = false
+					state.currentUser = action.payload
+					state.error = null
+				}
+			)
+			.addCase(setCurrentUser.rejected, (state, action) => {
+				state.isLoading = false
+				state.error = action.payload as string
+			})
+
 			.addCase(fetchUsers.pending, state => {
 				state.isLoading = true
 			})
@@ -44,7 +62,6 @@ const userSlice = createSlice({
 				state.error = action.payload as string
 			})
 
-			// Create user
 			.addCase(createUser.pending, state => {
 				state.isLoading = true
 			})
@@ -58,7 +75,6 @@ const userSlice = createSlice({
 				state.error = action.payload as string
 			})
 
-			// Update user
 			.addCase(updateUser.pending, state => {
 				state.isLoading = true
 			})
@@ -77,7 +93,6 @@ const userSlice = createSlice({
 				state.error = action.payload as string
 			})
 
-			// Delete user
 			.addCase(deleteUser.pending, state => {
 				state.isLoading = true
 			})

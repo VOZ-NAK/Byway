@@ -1,5 +1,5 @@
 {
-	"name": "byway",
+	"name": "voznakk-byway",
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
@@ -12,7 +12,7 @@
 		"build-sb": "storybook build"
 	},
 	"dependencies": {
-		"@reduxjs/toolkit": "^2.5.0",
+		"@reduxjs/toolkit": "^2.5.1",
 		"@trivago/prettier-plugin-sort-imports": "^5.2.0",
 		"clsx": "^2.1.1",
 		"firebase": "^11.2.0",

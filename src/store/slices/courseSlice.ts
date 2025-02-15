@@ -6,7 +6,7 @@ import {
 	deleteCourse,
 	fetchCourses,
 	updateCourse
-} from '../api/courseActions'
+} from '../actions/courseActions'
 
 // State interface
 interface ICourseState {

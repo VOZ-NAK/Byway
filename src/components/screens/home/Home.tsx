@@ -1,7 +1,7 @@
 import { FC, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import { fetchCategories, fetchCourses, fetchUsers } from '@/store/api'
+import { fetchCategories, fetchCourses, fetchUsers } from '@/store/actions'
 
 import Layout from '@/components/layout/Layout'
 import { Course, Head, Swiper, User } from '@/components/shared'
@@ -21,33 +21,17 @@ const Home: FC = () => {
 	const navigate = useNavigate()
 	const dispatch = useAppDispatch()
 
-	const {
-		categories,
-		isLoading: categoriesLoading,
-		error: categoriesError
-	} = useAppSelector(state => state.category)
+	const { categories } = useAppSelector(state => state.category)
 
-	const {
-		users,
-		isLoading: usersLoading,
-		error: usersError
-	} = useAppSelector(state => state.user)
+	const { users } = useAppSelector(state => state.user)
 
-	const {
-		courses,
-		isLoading: coursesLoading,
-		error: coursesError
-	} = useAppSelector(state => state.course)
+	const { courses } = useAppSelector(state => state.course)
 
 	useEffect(() => {
 		dispatch(fetchUsers())
 		dispatch(fetchCourses())
 		dispatch(fetchCategories())
 	}, [dispatch])
-
-	if (usersError || coursesError) {
-		return <div>Ошибка: {usersError || coursesError}</div>
-	}
 
 	return (
 		<Layout>
