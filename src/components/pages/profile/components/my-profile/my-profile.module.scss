@@ -1,0 +1,14 @@
+.myProfile {
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+
+	button {
+		width: 100%;
+		justify-content: center;
+
+		&::before {
+			display: none;
+		}
+	}
+}

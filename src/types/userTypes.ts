@@ -5,9 +5,14 @@ interface IUser {
 	cover: string
 	headline: string
 	description: string
-	socials: string[]
+	socials: {
+		twitter: string
+		instagram: string
+		byway: string
+	}
 	courses: string[]
 	reviews: string[]
 	purchases: string[]
+	createdAt: string
 }
 export type { IUser }

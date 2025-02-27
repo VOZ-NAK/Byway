@@ -6,9 +6,8 @@ import {
 	deleteCourse,
 	fetchCourses,
 	updateCourse
-} from '../api/courseActions'
+} from '../actions/courseActions'
 
-// State interface
 interface ICourseState {
 	courses: ICourse[]
 	isLoading: boolean
@@ -27,7 +26,7 @@ const courseSlice = createSlice({
 	reducers: {},
 	extraReducers: builder => {
 		builder
-			// Fetch courses
+
 			.addCase(fetchCourses.pending, state => {
 				state.isLoading = true
 			})
@@ -44,7 +43,7 @@ const courseSlice = createSlice({
 				state.error = action.payload as string
 			})
 
-			// Create course
+		builder
 			.addCase(createCourse.pending, state => {
 				state.isLoading = true
 			})
@@ -61,7 +60,7 @@ const courseSlice = createSlice({
 				state.error = action.payload as string
 			})
 
-			// Update course
+		builder
 			.addCase(updateCourse.pending, state => {
 				state.isLoading = true
 			})
@@ -83,7 +82,7 @@ const courseSlice = createSlice({
 				state.error = action.payload as string
 			})
 
-			// Delete course
+		builder
 			.addCase(deleteCourse.pending, state => {
 				state.isLoading = true
 			})

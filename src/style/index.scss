@@ -1,62 +1,9 @@
 @use './null' as *;
 @use './variables' as *;
 @use './fonts' as *;
+@use './typography' as *;
 
 @import url('https://fonts.googleapis.com/css?family=Inter:400,500,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,500&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap');
-
-/* Typography styles */
-.title-small {
-	font-family: var(--fontFiraSansCondensed);
-	font-size: 24px;
-	font-weight: 500;
-	white-space: nowrap;
-}
-
-.title-medium {
-	font-family: var(--fontFiraSansCondensed);
-	font-size: 32px;
-	font-weight: 500;
-	white-space: nowrap;
-}
-
-.title-large {
-	font-family: var(--fontFiraSansCondensed);
-	font-size: 40px;
-	font-weight: 500;
-	white-space: nowrap;
-
-	@media (max-width: 991px) {
-		font-size: 32px;
-	}
-}
-
-.text {
-	font-family: var(--fontFiraSans);
-	font-size: 20px;
-	font-weight: 400;
-	color: var(--semi-transparent-dark-gray);
-}
-
-.text-small {
-	font-family: var(--fontFiraSansCondensed);
-	font-size: 14px;
-	font-weight: 400;
-	color: var(--semi-transparent-dark-gray);
-}
-
-.text-medium {
-	font-family: var(--fontFiraSansCondensed);
-	font-size: 20px;
-	font-weight: 400;
-	color: var(--semi-transparent-dark-gray);
-}
-
-.text-large {
-	font-family: var(--fontFiraSansCondensed);
-	font-size: 24px;
-	font-weight: 400;
-	color: var(--dark-gray);
-}

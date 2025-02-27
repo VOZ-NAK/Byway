@@ -1,0 +1,29 @@
+.profileAside {
+	flex: 1 1 31%;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+
+	ul {
+		background-color: var(--light-background);
+		border-radius: 24px;
+		padding: 10px;
+		display: grid;
+		gap: 10px;
+	}
+
+	li {
+		cursor: pointer;
+		padding: 15px;
+		border-radius: 24px;
+
+		&:hover,
+		&.selected {
+			background-color: var(--darker-background);
+
+			p {
+				color: var(--semi-transparent-light-gray-2) !important;
+			}
+		}
+	}
+}

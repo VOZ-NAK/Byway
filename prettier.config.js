@@ -12,7 +12,6 @@ export default {
 		'^@/store/(.*)$',
 		'^@/components/(.*)$',
 		'^@/hooks/(.*)$',
-		'^@/shared/(.*)$',
 		'^@/services/(.*)$',
 		'^@/assets/(.*)$',
 		'^@/utils/(.*)$',

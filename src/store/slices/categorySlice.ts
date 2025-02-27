@@ -6,9 +6,8 @@ import {
 	deleteCategory,
 	fetchCategories,
 	updateCategory
-} from '../api/categoryActions'
+} from '../actions/categoryActions'
 
-// State interface
 interface ICategoryState {
 	categories: ICategory[]
 	isLoading: boolean
@@ -27,7 +26,6 @@ const categorySlice = createSlice({
 	reducers: {},
 	extraReducers: builder => {
 		builder
-			// Fetch categories
 			.addCase(fetchCategories.pending, state => {
 				state.isLoading = true
 			})
@@ -44,7 +42,7 @@ const categorySlice = createSlice({
 				state.error = action.payload as string
 			})
 
-			// Create category
+		builder
 			.addCase(createCategory.pending, state => {
 				state.isLoading = true
 			})
@@ -61,7 +59,7 @@ const categorySlice = createSlice({
 				state.error = action.payload as string
 			})
 
-			// Update category
+		builder
 			.addCase(updateCategory.pending, state => {
 				state.isLoading = true
 			})
@@ -83,7 +81,7 @@ const categorySlice = createSlice({
 				state.error = action.payload as string
 			})
 
-			// Delete category
+		builder
 			.addCase(deleteCategory.pending, state => {
 				state.isLoading = true
 			})
